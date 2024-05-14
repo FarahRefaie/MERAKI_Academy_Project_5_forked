@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
-import "./style.css";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/authContext";
 
 // =================================================================
@@ -65,7 +64,7 @@ const RegisterPatient = () => {
         {!isLoggedIn ? (
           <>
             <p className="Title">Register:</p>
-            <form onSubmit={addNewUser}>
+            <form onSubmit={addNewPatient}>
               <br />
               <input
                 type="text"

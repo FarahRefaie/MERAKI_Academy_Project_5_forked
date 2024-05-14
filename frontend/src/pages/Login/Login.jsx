@@ -1,8 +1,8 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { configureStore } from "@reduxjs/toolkit";
 import {  useDispatch, useSelector } from "react-redux";
-import {setLogin,setUserId,setLogout} from "../redux/reducers/auth/index"
+// import {setLogin,setUserId,setLogout} from "../redux/reducers/auth/index"
 
 
 import "./style.css";

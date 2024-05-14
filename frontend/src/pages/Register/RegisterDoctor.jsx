@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
-import "./style.css";
 import axios from "axios";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/authContext";
 
 // =================================================================
@@ -9,7 +8,6 @@ import { AuthContext } from "../../contexts/authContext";
 const RegisterDoctor = () => {
   
   const { isLoggedIn } = useContext(AuthContext);
-
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState(0);
@@ -65,7 +63,7 @@ const RegisterDoctor = () => {
         {!isLoggedIn ? (
           <>
             <p className="Title">Register:</p>
-            <form onSubmit={addNewUser}>
+            <form onSubmit={addNewDoctor}>
               <br />
               <input
                 type="text"
