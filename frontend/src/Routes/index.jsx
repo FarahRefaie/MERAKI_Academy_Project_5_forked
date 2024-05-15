@@ -5,7 +5,7 @@ import User from "../pages/User"
 export const router = createBrowserRouter([
   {
     path: "*",
-    element: < />,
+    element: {}
   }
 //   {
 //     path: "/",

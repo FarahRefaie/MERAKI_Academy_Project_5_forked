@@ -1,6 +1,7 @@
+
 import React from 'react'
-import { Routes, Route, useNavigate } from "react-router-dom";
-import "./style.css"
+import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -10,14 +11,14 @@ const PatientOrDoctor = () => {
   return (
     <div className='PatientOrDoctor'>
     <div className='PatientButton'>
-    <img className='tecImg' src=""/>
+    <img className='patImg' src=""/>
 
       <button className='patButton' onClick={()=>{
 navigate("/patientregister")
       }}>Patient</button>
     </div>
        <div className='DoctorButton'>
-       <img className='stuImg' src=""/>
+       <img className='docImg' src=""/>
        <button className='DocButton' onClick={()=>{
  navigate("/doctorregister")
        }}>Doctor</button>
@@ -27,4 +28,4 @@ navigate("/patientregister")
  </div>
 
   )}
-  export default Default
+  export default PatientOrDoctor

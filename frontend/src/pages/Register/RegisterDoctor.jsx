@@ -1,14 +1,14 @@
-import React, { useContext, useState } from "react";
-import "./style.css";
+import React, { useState } from "react";
+
 import axios from "axios";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../contexts/authContext";
+
 
 // =================================================================
 
 const RegisterDoctor = () => {
   
-  const { isLoggedIn } = useContext(AuthContext);
+ 
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");

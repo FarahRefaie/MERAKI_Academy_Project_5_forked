@@ -1,14 +1,14 @@
-import React, { useContext, useState } from "react";
-import "./style.css";
-import axios from "axios";
 
-import { AuthContext } from "../../contexts/authContext";
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 // =================================================================
 
-const RegisterPatient = () => {
-
-  const { isLoggedIn } = useContext(AuthContext);
+const RegisterDoctor = () => {
+  
+  
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState(0);
@@ -16,15 +16,14 @@ const RegisterPatient = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
-  const [userRole, setUserRole] = useState(1);
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState(false);
 
  
   // =================================================================
 
-  const addNewPatient = async (e) => {
-    const role_id=1
+  const addNewDoctor = async (e) => {
+    const role_id=2
     const navigate = useNavigate();
 
     e.preventDefault();
@@ -65,7 +64,7 @@ const RegisterPatient = () => {
         {!isLoggedIn ? (
           <>
             <p className="Title">Register:</p>
-            <form onSubmit={addNewUser}>
+            <form onSubmit={addNewDoctor}>
               <br />
               <input
                 type="text"
@@ -110,10 +109,10 @@ const RegisterPatient = () => {
               />
               <br />
 
-              <button className="patregbut" onClick={
-                addNewPatient()
-              }
-              >Register</button>
+              <button className="docregbut" onClick={
+                addNewDoctor()
+           
+              }>Register</button>
               <br />
             </form>
             {status
@@ -128,4 +127,4 @@ const RegisterPatient = () => {
   );
 };
 
-export default RegisterPatient;
+export default RegisterDoctor;
