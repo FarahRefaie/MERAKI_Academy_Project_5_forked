@@ -1,6 +1,10 @@
-
-const {Server} = require ('socket.io')
+const express = require("express");
 const http = require("http");
+const socket = require("socket.io");
+const cors = require("cors");
+require("dotenv").config();
+const {Server} = require ('socket.io')
+
 const io = new Server(8080,{cors:{origin : "*"}})
 const auth = require ("./middlewares/auth")
 const notificationmw= require ("./middlewares/notificationmw")
@@ -58,8 +62,7 @@ socket.on("disconnect",()=>{
 
 
 
-const express = require("express");
-const cors = require("cors");
+
 
 
 require("dotenv").config();

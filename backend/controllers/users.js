@@ -185,9 +185,34 @@ const getProviderBySpecialty = (req, res)=>{
     });
 }
 
+const getAllProviders = (req, res)=>{
+  
+  const query = `SELECT * FROM users WHERE role_id =2`;
+
+
+  pool
+    .query(query)
+    .then((result) => {
+        res.status(200).json({
+          success: true,
+          message: "providers ",
+          result: result.rows,
+        });
+      })
+      .catch((err) => {
+        res.status(500).json({
+          success: false,
+          message: "Server error",
+          err: err,
+        });
+      });
+  };
+
 module.exports = {
   registerDoctor,
   registerPatient,
   login,
-  getuserinfo,getProviderBySpecialty
+  getuserinfo,
+  getProviderBySpecialty,
+  getAllProviders
 };
