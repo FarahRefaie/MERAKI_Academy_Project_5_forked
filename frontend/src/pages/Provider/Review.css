@@ -71,6 +71,12 @@ body {
   margin-top: 10px;
 }
 
+.anony{
+font-size: 10px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin-left: -1000px ;
+}
+
 .add-review-container {
   display: flex;
   flex-direction: column;

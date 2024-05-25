@@ -8,6 +8,7 @@ import "./Landing.css";
 import { setProviderId } from '../../Service/Redux/Slice/ProviderId';
 
 
+
 function Landing() {
   const specialtiesWithPhotos = [
     { photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5X52F9HR3UXmzg6jIM4WWua1AhkYncSxFEP_2R16CA&s' },

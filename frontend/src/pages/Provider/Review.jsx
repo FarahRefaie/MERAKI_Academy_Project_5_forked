@@ -132,7 +132,9 @@ const Reviews = () => {
         
           return (
 <div key={index} className="review">
-            <div>{review.comment}</div>
+            <div>
+              <p className="anony">Anonymous</p>
+              {review.comment}</div>
             {review.users_id == users && (
               <button onClick={() => 
                 
